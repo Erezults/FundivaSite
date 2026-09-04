@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>מדיניות פרטיות — Fundiva</title>
 <meta name="description" content="מדיניות הפרטיות של Fundiva — כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם.">
+<link rel="alternate" hreflang="he" href="https://fundiva.erezults.com/privacy/">
+<link rel="alternate" hreflang="en" href="https://fundiva.erezults.com/privacy/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,6 +35,11 @@
     min-height:100vh;
   }
   a{color:var(--accent1)}
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:3px solid var(--accent1);
+    outline-offset:2px;
+    border-radius:4px;
+  }
   .wrap{max-width:760px;margin:0 auto;padding:0 24px}
   header{padding:40px 24px 0}
   .back{
@@ -98,17 +105,23 @@
     .card{padding:26px 20px}
   }
 </style>
+<style>
+  .lang{float:left;font-size:14px;color:var(--muted);text-decoration:none;border:1px solid var(--card-border);padding:8px 16px;border-radius:999px}
+  .lang:hover{color:var(--accent1);border-color:rgba(91,157,249,.4)}
+  .ai-box{margin:12px 0 16px;padding:18px 20px;background:rgba(47,168,145,.08);border:1px solid rgba(47,168,145,.3);border-radius:14px}
+  .ai-box p{margin:0 0 8px}
+</style>
 </head>
 <body>
 
 <header>
-  <div class="wrap"><a class="back" href="/">→ חזרה לדף הבית</a></div>
+  <div class="wrap"><a class="back" href="/">→ חזרה לדף הבית</a> <a class="lang" href="/privacy/en/" lang="en" hreflang="en">English</a></div>
 </header>
 
 <div class="page-head">
   <div class="word">Fundiva</div>
   <h1>מדיניות פרטיות</h1>
-  <p class="updated">עודכן לאחרונה: ינואר 2026</p>
+  <p class="updated">עודכן לאחרונה: 4 בספטמבר 2026</p>
 </div>
 
 <article>
@@ -129,17 +142,27 @@
     <h2>3. כיצד אנו משתמשים במידע</h2>
     <p>המידע משמש אך ורק לצורך תפעול האפליקציה: הצגת יתרות ותובנות, סנכרון בין חברי קבוצה, וחילוץ אוטומטי של נתונים מדוחות שהעליתם. <strong>אנו לא מוכרים מידע אישי לצדדים שלישיים ולא משתמשים בו לפרסום.</strong></p>
 
-    <h2>4. עיבוד באמצעות בינה מלאכותית (AI)</h2>
-    <p>כאשר אתם סורקים דוח קרן, קובץ הדוח נשלח לשירות ה-Gemini API של Google לצורך חילוץ נתונים מובנים (יתרות, הפקדות, תשואות ודמי ניהול) בלבד. הקבצים משמשים לצורך העיבוד והפענוח ואינם משמשים לאימון מודלים של Google או כל צד שלישי אחר.</p>
+    <h2>4. עיבוד באמצעות בינה מלאכותית (Google Gemini)</h2>
+    <div class="ai-box">
+      <p><strong>שום דבר לא נשלח לשירות ה-AI לפני שאישרתם זאת במפורש בתוך האפליקציה.</strong> לפני עיבוד הדוח הראשון האפליקציה מציגה מסך הסכמה שמסביר בדיוק מה נשלח ולמי, ומבקש לסמן תיבה ולאשר. התיבה לעולם אינה מסומנת מראש. אם תסרבו — שום מידע לא נשלח, וניתן להזין את נתוני הקרן ידנית.</p>
+    </div>
+    <ul>
+      <li><strong>מה נשלח:</strong> קובץ הדוח שבחרתם לסרוק (ה-PDF או התמונה). הדוח עשוי לכלול מידע אישי כגון שם, מספר ת"ז, מספר חשבון/פוליסה ונתונים פיננסיים (יתרות, הפקדות, תשואות, דמי ניהול). אם תתקנו לאחר מכן ערכים שה-AI חילץ, ייתכן שגם ערכי השדות המתוקנים (לא הקובץ שוב) יישלחו כדי שחילוצים עתידיים ילמדו את מבנה הדוחות שלכם.</li>
+      <li><strong>למי:</strong> ל-Google LLC, דרך <strong>Google Gemini API</strong>, בשרתי Google (שעשויים להימצא מחוץ לישראל ולאיחוד האירופי). הקובץ עובר דרך השרת המאובטח שלנו (Supabase Edge Functions) ומועבר ל-Google רק לאחר שהשרת מוודא שההסכמה שלכם רשומה.</li>
+      <li><strong>למה:</strong> אך ורק לקריאת הדוח והחזרת נתוני קרן מובנים (מוסד, יתרות, הפקדות, תשואות ודמי ניהול), כדי שלא תצטרכו להקליד אותם בעצמכם.</li>
+      <li><strong>איך המידע מוגן:</strong> המידע מועבר מוצפן (TLS). ‏Google מעבדת אותו לפי <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">תנאי השימוש של Gemini API</a> והתחייבויות עיבוד-הנתונים שלה, המעניקות למידע שלכם הגנה שוות-ערך למתואר במדיניות זו. <strong>Google אינה משתמשת בדוחות שלכם לאימון המודלים שלה</strong> ושומרת אותם רק למשך הזמן הנדרש לעיבוד הבקשה.</li>
+      <li><strong>שמירה אצלנו:</strong> קובץ הדוח שהועלה נשמר בחשבונכם כדי שתוכלו לעיין בו, ונמחק כשאתם מוחקים את רשומת הקרן או את החשבון.</li>
+      <li><strong>ביטול ההסכמה:</strong> ניתן לבטל את ההסכמה בכל עת ב-<em>הגדרות → הסכמה לעיבוד מסמכים ב-AI → ביטול ההסכמה</em>. לאחר הביטול לא יישלחו עוד דוחות ל-Google; נתונים שכבר חולצו נשארים בחשבונכם עד שתמחקו אותם.</li>
+    </ul>
 
     <h2>5. תשתית ואחסון נתונים</h2>
     <p>האפליקציה פועלת על גבי Supabase (מסד נתונים PostgreSQL), הכולל מנגנוני אבטחה ברמת השורה (Row-Level Security) המבטיחים שכל משתמש וקבוצה יכולים לגשת רק למידע הרלוונטי להם. תהליכי ההתחברות והאימות (Auth) מנוהלים גם הם באמצעות Supabase.</p>
 
     <h2>6. גורמים שלישיים</h2>
-    <p>אנו משתפים מידע מוגבל עם ספקי תשתית הנדרשים להפעלת השירות בלבד:</p>
+    <p>אנו משתפים מידע מוגבל רק עם ספקי התשתית הנדרשים להפעלת השירות. כל אחד מהם מחויב, חוזית וטכנית, להעניק למידע שלכם הגנה זהה או שוות-ערך לזו המתוארת במדיניות זו:</p>
     <ul>
       <li><strong>Supabase</strong> — אחסון מסד הנתונים, אימות משתמשים ואחסון קבצים.</li>
-      <li><strong>Google (Gemini API)</strong> — עיבוד דוחות קרן שהועלו לצורך חילוץ נתונים אוטומטי.</li>
+      <li><strong>Google (Gemini API)</strong> — עיבוד דוחות הקרן שבחרתם לסרוק, לצורך חילוץ נתונים אוטומטי בלבד, ורק לאחר הסכמתכם המפורשת (סעיף 4).</li>
       <li><strong>Apple</strong> — הפצת האפליקציה, רכישות בתוך האפליקציה ומנויים דרך App Store.</li>
     </ul>
 
@@ -166,8 +189,9 @@
 </article>
 
 <footer>
-  <div>© 2026 Fundiva · <a href="/">דף הבית</a> · <a href="/terms">תנאי שימוש</a></div>
+  <div>© 2026 Fundiva · <a href="/">דף הבית</a> · <a href="/terms">תנאי שימוש</a> · <a href="/accessibility">הצהרת נגישות</a> · <a href="/privacy/en/">English</a></div>
 </footer>
 
+<script src="/accessibility.js"></script>
 </body>
 </html>

@@ -33,6 +33,11 @@
     min-height:100vh;
   }
   a{color:var(--accent1)}
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:3px solid var(--accent1);
+    outline-offset:2px;
+    border-radius:4px;
+  }
   .wrap{max-width:760px;margin:0 auto;padding:0 24px}
   header{padding:40px 24px 0}
   .back{
@@ -165,8 +170,9 @@
 </article>
 
 <footer>
-  <div>© 2026 Fundiva · <a href="/">דף הבית</a> · <a href="/privacy">מדיניות פרטיות</a></div>
+  <div>© 2026 Fundiva · <a href="/">דף הבית</a> · <a href="/privacy">מדיניות פרטיות</a> · <a href="/accessibility">הצהרת נגישות</a></div>
 </footer>
 
+<script src="/accessibility.js"></script>
 </body>
 </html>
