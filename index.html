@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fundiva — ניהול ומעקב קרנות השתלמות, גמל ופנסיה</title>
-<meta name="description" content="Fundiva — האפליקציה לניהול ומעקב קרנות השתלמות, גמל ופנסיה. סריקת דוחות באמצעות AI, מעקב קבוצתי, דשבורד ותובנות. הבסיס חינם לתמיד.">
+<title data-en="Fundiva — Track Study, Provident &amp; Pension Funds">Fundiva — ניהול ומעקב קרנות השתלמות, גמל ופנסיה</title>
+<meta name="description" data-en="Fundiva — the app for tracking study, provident and pension funds. AI statement scanning, group tracking, dashboard and insights. The basics are free forever." content="Fundiva — האפליקציה לניהול ומעקב קרנות השתלמות, גמל ופנסיה. סריקת דוחות באמצעות AI, מעקב קבוצתי, דשבורד ותובנות. הבסיס חינם לתמיד.">
+<script src="/i18n.js"></script>
 <link rel="icon" href="/icon.png">
 <link rel="apple-touch-icon" href="/icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fundiva — ניהול ומעקב קרנות השתלמות, גמל ופנסיה">
-<meta property="og:description" content="Fundiva — האפליקציה לניהול ומעקב קרנות השתלמות, גמל ופנסיה. סריקת דוחות באמצעות AI, מעקב קבוצתי, דשבורד ותובנות. הבסיס חינם לתמיד.">
+<meta property="og:title" data-en="Fundiva — Track Study, Provident &amp; Pension Funds" content="Fundiva — ניהול ומעקב קרנות השתלמות, גמל ופנסיה">
+<meta property="og:description" data-en="Fundiva — the app for tracking study, provident and pension funds. AI statement scanning, group tracking, dashboard and insights. The basics are free forever." content="Fundiva — האפליקציה לניהול ומעקב קרנות השתלמות, גמל ופנסיה. סריקת דוחות באמצעות AI, מעקב קבוצתי, דשבורד ותובנות. הבסיס חינם לתמיד.">
 <meta property="og:url" content="https://fundiva.erezults.com/">
 <meta property="og:image" content="https://fundiva.erezults.com/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -321,6 +322,10 @@
     direction:ltr;
   }
 
+  html[lang="en"] .plan.premium::after{content:"Recommended"}
+  html[lang="en"] .footer-inner{text-align:left}
+  html[lang="en"] .eyebrow{letter-spacing:.02em}
+
   @media (max-width:820px){
     .features{grid-template-columns:1fr 1fr}
   }
@@ -329,7 +334,7 @@
     .plans{grid-template-columns:1fr}
     .hero{padding:64px 20px 48px}
     section{padding:56px 20px}
-    .footer-inner{flex-direction:column;align-items:flex-start;text-align:right}
+    .footer-inner{flex-direction:column;align-items:flex-start;text-align:start}
   }
 </style>
 </head>
@@ -338,89 +343,89 @@
 <div class="hero">
   <div class="wrap">
     <img src="icon.png" alt="Fundiva" class="hero-icon">
-    <span class="eyebrow"><span class="dot"></span>האפליקציה זמינה עכשיו</span>
+    <span class="eyebrow" data-en="<span class=&quot;dot&quot;></span>The app is available now"><span class="dot"></span>האפליקציה זמינה עכשיו</span>
     <h1 class="word">Fundiva</h1>
-    <p class="tagline">ניהול ומעקב קרנות השתלמות, גמל ופנסיה — ביחד</p>
-    <p class="subhead">אפליקציה אחת לכל קרנות המשפחה: סורקים דוח, ה-AI מחלץ את הנתונים, ורואים תמונה מלאה — לבד או עם השותפים לחיים.</p>
+    <p class="tagline" data-en="Track your study, provident and pension funds — together">ניהול ומעקב קרנות השתלמות, גמל ופנסיה — ביחד</p>
+    <p class="subhead" data-en="One app for all of your family’s funds: scan a statement, the AI extracts the data, and you see the full picture — on your own or together with your partners.">אפליקציה אחת לכל קרנות המשפחה: סורקים דוח, ה-AI מחלץ את הנתונים, ורואים תמונה מלאה — לבד או עם השותפים לחיים.</p>
     <div class="cta-row">
-      <a href="https://apps.apple.com/app/id6786450072" class="btn-appstore" target="_blank" rel="noopener"><span class="apple">🍎</span><span>הורידו ב-App Store<small>Download on the App Store</small></span></a>
+      <a href="https://apps.apple.com/app/id6786450072" class="btn-appstore" target="_blank" rel="noopener" data-en="<span class=&quot;apple&quot;>🍎</span><span>Download on the App Store<small>Available for iPhone, iPad and Mac</small></span>"><span class="apple">🍎</span><span>הורידו ב-App Store<small>Download on the App Store</small></span></a>
     </div>
-    <p class="subhead">זמינה ל-iPhone, ל-iPad ול-Mac — בהורדה אחת מה-App Store.</p>
+    <p class="subhead" data-en="Available for iPhone, iPad and Mac — one download from the App Store.">זמינה ל-iPhone, ל-iPad ול-Mac — בהורדה אחת מה-App Store.</p>
   </div>
 </div>
 
 <section id="features">
   <div class="section-head">
-    <div class="kicker">מה זה עושה</div>
-    <h2>כל מה שצריך כדי להפסיק לנחש</h2>
+    <div class="kicker" data-en="What it does">מה זה עושה</div>
+    <h2 data-en="Everything you need to stop guessing">כל מה שצריך כדי להפסיק לנחש</h2>
   </div>
   <div class="features wrap">
     <div class="fcard">
       <div class="icon">📄</div>
-      <h3>סריקת דוחות AI</h3>
-      <p>צלמו או העלו דוח קרן (PDF/תמונה) וה-AI מחלץ יתרות, הפקדות, תשואות ודמי ניהול — אוטומטית.</p>
+      <h3 data-en="AI report scanning">סריקת דוחות AI</h3>
+      <p data-en="Photograph or upload a fund statement (PDF/image) and the AI automatically extracts balances, deposits, returns and management fees.">צלמו או העלו דוח קרן (PDF/תמונה) וה-AI מחלץ יתרות, הפקדות, תשואות ודמי ניהול — אוטומטית.</p>
     </div>
     <div class="fcard">
       <div class="icon">👥</div>
-      <h3>מעקב קבוצתי</h3>
-      <p>נהלו קרנות של המשפחה או השותפים יחד, עם עמיתים והרשאות ברורות לכל אחד.</p>
+      <h3 data-en="Group tracking">מעקב קבוצתי</h3>
+      <p data-en="Manage funds of your family or partners together, with members and clear permissions for each person.">נהלו קרנות של המשפחה או השותפים יחד, עם עמיתים והרשאות ברורות לכל אחד.</p>
     </div>
     <div class="fcard">
       <div class="icon">📊</div>
-      <h3>דשבורד ותובנות</h3>
-      <p>גרפים ברורים של הפקדות, תשואות, הקצאת נכסים ותובנות חכמות על הכסף שלכם.</p>
+      <h3 data-en="Dashboard &amp; insights">דשבורד ותובנות</h3>
+      <p data-en="Clear charts of deposits, returns and asset allocation, plus smart insights about your money.">גרפים ברורים של הפקדות, תשואות, הקצאת נכסים ותובנות חכמות על הכסף שלכם.</p>
     </div>
     <div class="fcard">
       <div class="icon">🏦</div>
-      <h3>כל סוגי הקרנות</h3>
-      <p>השתלמות, גמל ופנסיה — ממגוון מוסדות פיננסיים, הכול במקום אחד.</p>
+      <h3 data-en="All fund types">כל סוגי הקרנות</h3>
+      <p data-en="Study funds, provident funds and pension — from a variety of financial institutions, all in one place.">השתלמות, גמל ופנסיה — ממגוון מוסדות פיננסיים, הכול במקום אחד.</p>
     </div>
     <div class="fcard">
       <div class="icon">📱</div>
-      <h3>ווידג'טים</h3>
-      <p>מסך הבית ומסך הנעילה: סריקת דוח חדש וסטטיסטיקות במבט מהיר, בלי לפתוח את האפליקציה.</p>
+      <h3 data-en="Widgets">ווידג'טים</h3>
+      <p data-en="Home Screen and Lock Screen: scan a new statement and see statistics at a glance, without opening the app.">מסך הבית ומסך הנעילה: סריקת דוח חדש וסטטיסטיקות במבט מהיר, בלי לפתוח את האפליקציה.</p>
     </div>
     <div class="fcard">
       <div class="icon">📥</div>
-      <h3>ייבוא ושיתוף</h3>
-      <p>שיתוף מסמך ישירות לאפליקציה מכל מקום, וייבוא מרובה־קבצים בבת אחת.</p>
+      <h3 data-en="Import &amp; share">ייבוא ושיתוף</h3>
+      <p data-en="Share a document straight into the app from anywhere, and import multiple files at once.">שיתוף מסמך ישירות לאפליקציה מכל מקום, וייבוא מרובה־קבצים בבת אחת.</p>
     </div>
   </div>
 </section>
 
 <section id="plans">
   <div class="section-head">
-    <div class="kicker">חבילות</div>
-    <h2>הבסיס חינם לתמיד — משדרגים רק כשגדלים</h2>
+    <div class="kicker" data-en="Plans">חבילות</div>
+    <h2 data-en="The basics are free forever — upgrade only when you grow">הבסיס חינם לתמיד — משדרגים רק כשגדלים</h2>
   </div>
   <div class="plans wrap">
     <div class="plan free">
-      <p class="ptitle">חינם</p>
-      <p class="pdesc">כל מה שצריך כדי להתחיל לעקוב</p>
+      <p class="ptitle" data-en="Free">חינם</p>
+      <p class="pdesc" data-en="Everything you need to start tracking">כל מה שצריך כדי להתחיל לעקוב</p>
       <ul>
-        <li><span class="check">•</span>קבוצה אחת</li>
-        <li><span class="check">•</span>2 עמיתים</li>
-        <li><span class="check">•</span>2 חברים בקבוצה</li>
-        <li><span class="check">•</span>עד 10 קרנות</li>
-        <li><span class="check">•</span>2 סריקות AI בחודש</li>
-        <li><span class="check">•</span>ייבוא קובץ בודד</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>One group"><span class="check">•</span>קבוצה אחת</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>2 holders"><span class="check">•</span>2 עמיתים</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>2 members per group"><span class="check">•</span>2 חברים בקבוצה</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>Up to 10 funds"><span class="check">•</span>עד 10 קרנות</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>2 AI scans per month"><span class="check">•</span>2 סריקות AI בחודש</li>
+        <li data-en="<span class=&quot;check&quot;>•</span>Single-file import"><span class="check">•</span>ייבוא קובץ בודד</li>
       </ul>
     </div>
     <div class="plan premium">
-      <p class="ptitle">פרימיום</p>
-      <p class="pdesc">לניהול משפחתי מלא, בלי הגבלות</p>
+      <p class="ptitle" data-en="Premium">פרימיום</p>
+      <p class="pdesc" data-en="For full family management, no limits">לניהול משפחתי מלא, בלי הגבלות</p>
       <ul>
-        <li><span class="check">✓</span>קבוצות ללא הגבלה</li>
-        <li><span class="check">✓</span>עמיתים ללא הגבלה</li>
-        <li><span class="check">✓</span>חברים ללא הגבלה</li>
-        <li><span class="check">✓</span>קרנות ללא הגבלה</li>
-        <li><span class="check">✓</span>סריקות AI ללא הגבלה</li>
-        <li><span class="check">✓</span>ייבוא מרובה־קבצים</li>
-        <li><span class="check">✓</span>ווידג'טים</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Unlimited groups"><span class="check">✓</span>קבוצות ללא הגבלה</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Unlimited holders"><span class="check">✓</span>עמיתים ללא הגבלה</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Unlimited members"><span class="check">✓</span>חברים ללא הגבלה</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Unlimited funds"><span class="check">✓</span>קרנות ללא הגבלה</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Unlimited AI scans"><span class="check">✓</span>סריקות AI ללא הגבלה</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Multi-file import"><span class="check">✓</span>ייבוא מרובה־קבצים</li>
+        <li data-en="<span class=&quot;check&quot;>✓</span>Widgets"><span class="check">✓</span>ווידג'טים</li>
       </ul>
     </div>
   </div>
-  <p class="plan-note">
+  <p class="plan-note" data-en="Available as a monthly/yearly subscription or a one-time lifetime purchase.<br>A limited Founders Edition is available for the first people to join. <span class=&quot;highlight&quot;>The basics are free forever — upgrade only when you grow.</span>">
     זמין כמנוי חודשי/שנתי או כרכישה חד־פעמית לכל החיים.<br>
     מהדורת מייסדים מוגבלת למצטרפים הראשונים.
     <span class="highlight">הבסיס חינם לתמיד — משדרגים רק כשגדלים.</span>
@@ -429,13 +434,13 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">Fundiva<span>© 2026 Fundiva. כל הזכויות שמורות.</span></div>
+    <div class="footer-brand" data-en="Fundiva<span>© 2026 Fundiva. All rights reserved.</span>">Fundiva<span>© 2026 Fundiva. כל הזכויות שמורות.</span></div>
     <div class="footer-links">
       <a href="mailto:fundiva.support@erezults.com">fundiva.support@erezults.com</a>
-      <a href="/support">תמיכה</a>
-      <a href="/privacy">מדיניות פרטיות</a>
-      <a href="/terms">תנאי שימוש</a>
-      <a href="/accessibility">הצהרת נגישות</a>
+      <a href="/support" data-en="Support">תמיכה</a>
+      <a href="/privacy" data-en="Privacy Policy">מדיניות פרטיות</a>
+      <a href="/terms" data-en="Terms of Use">תנאי שימוש</a>
+      <a href="/accessibility" data-en="Accessibility Statement">הצהרת נגישות</a>
     </div>
   </div>
   <div class="footer-en">Fundiva — track your funds, together. Available now on the App Store for iPhone, iPad and Mac.</div>

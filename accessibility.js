@@ -41,6 +41,12 @@
     root.classList.toggle('a11y-stop-motion', state.stopMotion);
   }
 
+  var STR = {
+    he: { fab: 'פתיחת תפריט נגישות', group: 'אפשרויות נגישות', font: 'הגדלת טקסט (A+)', contrast: 'ניגודיות גבוהה', motion: 'עצירת אנימציות' },
+    en: { fab: 'Open accessibility menu', group: 'Accessibility options', font: 'Increase text size (A+)', contrast: 'High contrast', motion: 'Stop animations' }
+  };
+  function L() { return document.documentElement.getAttribute('lang') === 'en' ? STR.en : STR.he; }
+
   var state = loadState();
   applyState(state);
 
@@ -67,7 +73,7 @@
     var fab = document.createElement('button');
     fab.type = 'button';
     fab.className = 'a11y-fab';
-    fab.setAttribute('aria-label', 'פתיחת תפריט נגישות');
+    fab.setAttribute('aria-label', L().fab);
     fab.setAttribute('aria-expanded', 'false');
     fab.textContent = '♿';
 
@@ -77,21 +83,31 @@
     // with menuitem/arrow-key navigation — "menu" would promise a keyboard model
     // that isn't implemented (Tab works, arrows/Esc don't) (D14-04).
     panel.setAttribute('role', 'group');
-    panel.setAttribute('aria-label', 'אפשרויות נגישות');
+    panel.setAttribute('aria-label', L().group);
 
     var fontBtn = document.createElement('button');
     fontBtn.type = 'button';
-    fontBtn.textContent = 'הגדלת טקסט (A+)';
+    fontBtn.textContent = L().font;
 
     var contrastBtn = document.createElement('button');
     contrastBtn.type = 'button';
-    contrastBtn.textContent = 'ניגודיות גבוהה';
+    contrastBtn.textContent = L().contrast;
     contrastBtn.setAttribute('aria-pressed', String(state.contrast));
 
     var motionBtn = document.createElement('button');
     motionBtn.type = 'button';
-    motionBtn.textContent = 'עצירת אנימציות';
+    motionBtn.textContent = L().motion;
     motionBtn.setAttribute('aria-pressed', String(state.stopMotion));
+
+    function relabel() {
+      var s = L();
+      fab.setAttribute('aria-label', s.fab);
+      panel.setAttribute('aria-label', s.group);
+      fontBtn.textContent = s.font;
+      contrastBtn.textContent = s.contrast;
+      motionBtn.textContent = s.motion;
+    }
+    document.addEventListener('fundiva-lang', relabel);
 
     panel.appendChild(fontBtn);
     panel.appendChild(contrastBtn);
